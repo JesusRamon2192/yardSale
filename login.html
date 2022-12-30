@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Login</title>
+    <style>
+        :root {
+            
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #f7f7f7;
+            --hospital-green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            background: rgb(8, 117, 53);
+        }
+        .login {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .form-container {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+        }
+        .logo {
+            width: 150px;
+            margin-bottom: 20px;
+            justify-self: center;
+            display: none;
+            border: 2px solid rgb(0,255,0);
+            padding: 10px;
+            border-radius: 15px;
+        }
+     
+        .form {
+            display: flex;
+            flex-direction: column;
+            /* position:relative; */
+        }
+        .label {
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .input {
+            background-color: var(--text-input-field);
+            border: none;
+            border-radius: 8px;
+            height: 30px;
+            font-size: var(--md);
+            padding: 6px;
+            margin-bottom: 12px;
+        }
+        .inputEmail {
+            margin-bottom: 22px;
+        }
+        .primary-button {
+            background-color: rgb(5, 68, 5);
+            border-radius: 8px;
+            border: 3px solid black;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        }
+        .secondary-button {
+            background-color: rgb(236, 241, 236);
+            border-radius: 8px;
+            border: 3px solid rgb(6, 75, 6);
+            color: rgb(41, 185, 41);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        }
+        .form a {
+            text-decoration: none;
+            color: var(--hospital-green);
+            font-size: var(--sm);
+            text-align: center;
+            margin-bottom: 52px;
+        }
+        .login-button {
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+        .sign-button {
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+        @media (max-width:640px) {
+            .logo {
+                display: block;
+            }
+            .secondary-button {
+                position: absolute;
+                width: inherit;
+                bottom: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="form-container">
+            <img src="/logos/logo_yard_sale.svg" alt="logo" class="logo">
+
+            <form action="/" class="form">
+                <label for="emailAdress" class="label">Email address</label>
+                <input type="email" id="emailAdress" placeholder="usuario@yardsale.com" class="input inputEmail"> 
+                
+                <label for="password" class="label">Password</label>
+                <input type="password" id="password" placeholder="**********" class="input inputPassword">
+                
+                <input type="submit" value="Log in" class="primary-button login-button">
+                <a href="/">Forgot my password</a>
+            </form>
+            <input type="submit" value="Sign up" class="secondary-button sign-button">
+        </div>
+    </div>
+</body>
+</html>
