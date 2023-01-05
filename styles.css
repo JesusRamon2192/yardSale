@@ -145,7 +145,7 @@ nav {
     height: 75vh;
     transition: 400ms;
     left:-10px;
-    width: 100%;
+    width: 90%;
 }
 .mobile-menu ul {
     list-style: none;
