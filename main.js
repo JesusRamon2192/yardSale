@@ -8,7 +8,7 @@ const menuIconCart = $(".navbar-shopping-car");
 //Menus
 const desktopMenu = $(".desktop-menu");
 const mobileMenu = $(".mobile-menu");
-const shoppingCart = $(".product-detail");
+const shoppingCart = $("#shoppingCartContainer");
  
 //Container Cards
 const cardContainer = document.querySelector('.cards-container')
