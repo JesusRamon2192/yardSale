@@ -10,10 +10,10 @@ const productDetailIconClose = $('.product-detail-close')
 const desktopMenu = $(".desktop-menu");
 const mobileMenu = $(".mobile-menu");
 const shoppingCart = $("#shoppingCartContainer");
-
+ 
 //Container product
 const productDetailContainer = $("#productDetail");
-
+ 
 //Container Cards
 const cardContainer = document.querySelector('.cards-container')
  
@@ -22,7 +22,7 @@ const productList = [];
 productList.push ({
     name:'Bike',
     price: 12700,
-    image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+    image: 'https://assets.specialized.com/i/specialized/60821-104_HLMT_ALIGN-II-HLMT-MIPS-CE-BLK-BLKREFL-S-M_HERO?bg=rgb(241,241,241)&w=1600&h=900&fmt=auto'
 });
 productList.push ({
     name:'Bicycle helmet',
@@ -110,7 +110,7 @@ function renderList(array){
         imgCard.setAttribute('src', product.image);
         imgCard.addEventListener('click', openProductDetail);
         shoppingCart.classList.add('inactive');
-    
+        
         const productInfo = document.createElement('div');
         productInfo.classList.add('product-info');
     
@@ -133,15 +133,16 @@ function renderList(array){
         cardContainer.append(productCard);
     }
 }
-
+ 
 function openProductDetail(){
     shoppingCart.classList.add("inactive");
     mobileMenu.classList.add("inactive");
     productDetailContainer.classList.remove("inactive");
 }
-
+ 
 function productDetailClose (){
     productDetailContainer.classList.add("inactive");
 }
 renderList(productList)
+ 
 

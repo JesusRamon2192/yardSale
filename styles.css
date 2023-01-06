@@ -18,7 +18,8 @@ body {
     background: rgb(8, 117, 53);
 }
 .inactive {
-    opacity: 0;
+    /* opacity: 0; */
+    display: none;
 }
  
 /* General navbar */
@@ -139,10 +140,10 @@ nav {
     position:absolute;
     top: 60px;
     padding: 24px ;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    height: 75vh;
+    /* display: flex; */
+    /* justify-content: space-between;
+    flex-direction: column; */
+    /* height: 75vh; */
     transition: 400ms;
     left:-10px;
     width: 90%;
@@ -295,7 +296,7 @@ justify-content: center;
     margin-bottom: 0px;
     color: var(--very-light-pink);
 }
-
+ 
 /* Style aside product detail */
 #productDetail {
 width: 360px;
@@ -315,7 +316,7 @@ z-index: 2;
 padding: 12px;
 border-radius: 50%;
 }
-
+ 
 .product-detail-close:hover {
 cursor: pointer;
 }
